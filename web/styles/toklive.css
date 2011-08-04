@@ -1,0 +1,751 @@
+html{
+	margin-top: 0;
+	padding-top: 0;
+}
+
+body{
+	width: 100%;
+	margin: 0;
+	font-family: 'Lato', verdana, serif; 
+	font-size: 13px;
+	text-align: center;
+	
+}
+
+#content{
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	text-align: left;
+}
+
+
+
+/*
+	TITLE BAR
+*/
+#titleBar{
+	width: 100%;
+	height: 63px;
+	background-image: url(../images/title-background.png);
+	background-repeat: repeat-x;
+}
+#titleBarContent{
+	max-height: 63px;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	width: 950px;
+	height: 63px;	
+	margin: 0 auto;
+}
+#titleBarContent .titleText{
+	padding-top: 10px;
+	color: white;
+	font-size: 36px;
+	font-family: 'Lato', arial, serif; 
+}
+#titleBarContent .logo{
+	float: right;
+	height: 34px;
+	margin-top: 14px;
+}
+
+
+
+
+
+
+/*
+	PANELS
+*/
+.tokLivePanel{
+	width: 100%;
+}
+
+#panelOne{
+	background-image: url(../images/panel-one-back.png);
+	background-repeat: repeat-x;
+}
+#panelTwo{
+	background-image: url(../images/panel-two-back.png);
+	background-repeat: repeat-x;
+	clear:both;
+}
+
+.panelHeader{
+	width: 950px;
+	height: 45px;	
+	margin: 0 auto;
+}
+
+#panelHeaderThree{
+	padding-top: 10px;
+}
+
+#panelThreeHeaderButtons{
+	display: none;
+}
+
+
+.panelInstructions{
+	padding-top: 13px;
+	cursor: default;
+}
+
+
+.instructionNumber{
+	width: 20px;
+	margin-right: 10px;
+	float:left;
+}
+.panelThreeInstructionNumber{
+	margin-top: 5px;
+}
+
+.panelInstructions .instructionText{
+	margin-top: 2px;
+	float:left;
+}
+#panelTwoInstructionText{
+	margin-top: 2px;
+}
+
+
+.panelThreeLeft{
+	float: left;
+	margin-right: 10px;
+}
+.panelThreeRight{
+	float: right;
+	margin-right: 10px;
+}
+
+
+#panelSubheaderTwo{
+	float: left;
+	margin-right: 10px;
+}
+
+.panelInstructions #numberParticipantsText{
+	color: #939598;
+	margin-top: 2px;
+	width: 200px;
+	font-style: italic;
+	float: left;
+	display: none;
+}
+
+.openPanelButton{
+	width:15px;
+	float: right;
+	color: #00A4E4;
+	cursor: pointer;
+	border: none;
+	background: transparent;
+	margin-top: 13px;
+}
+
+
+
+#panelContentOne{
+	width: 950px;
+	height: 104px;
+	margin: 0px;
+	padding: 0px;
+	margin: 0 auto;
+}
+#panelContentTwo{
+	width: 950px;
+	height: 270px;
+	display: none;
+	margin: 0px;
+	padding: 0px;
+	margin: 0 auto;
+}
+
+#controlPanelContent p{
+	padding: 0;
+	margin: 0;
+}
+
+#twitterConnectButton{
+	margin-left: 38px;
+}
+
+.bigBlueButton{
+	color: white;
+	height: 24px;
+	width: 150px;
+	border: none;
+	font-size: 12px;
+	padding: 0;
+	background-color: #00A4E4;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	/*
+-moz-box-shadow: 0px 0px 10px #000;
+	-webkit-box-shadow: 0px 0px 10px #000;
+	box-shadow: 0px 0px 10px #000; 
+*/
+	border-radius: 4px;
+	cursor: pointer;
+	margin: 0;
+}
+
+.bigBlueButton:hover{ background-color: #0090BC; }
+.bigBlueButton:active{ background-color: #45CFFF; }
+.width150{
+	width: 100px;
+}
+
+#panelOneTwitterConnectButton{
+	float:left;
+}
+
+
+.participantsRight{
+	width: 205px;
+	float: right;
+}
+.participantsLeft{
+	width: 205px;
+}
+
+#tokboxUsersReadout{
+	color: white;
+	width: 150px;
+	margin: 15px 20px 0 0;
+	float: right;
+}
+#tokboxUsersReadout #numberViewers{
+	float: right;
+}
+#tokboxUsersReadout #numberParticipants{
+
+}
+
+#twitterSignOutButton{
+	padding-top: 10px;
+	float: right;
+	display: none;
+}
+
+#panelSubheaderOne{
+	width: 700px;
+}
+
+
+
+#panelThree{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	min-height: 100px;
+	background-color: white;
+}
+#panelContentThree{
+	width: 950px;
+	padding-top: 10px;
+	margin: 0 auto;
+	display: none;
+}
+
+#panelThree #panelThreeRight{
+	width: 445px;
+	float: right;
+}
+
+#panelThree #liveVideoEventContainer{
+	width: 480px;
+	height: 296px;
+	margin-bottom: 10px;
+	background-color: #eee;
+}
+
+#panelThree #twitterHashTags{
+	padding-bottom: 8px;
+}
+
+
+
+
+
+
+/*
+	TOKBOX ROOMS LIST in Panel 2 
+*/
+
+
+#tokLiveRooms{
+	width: 100%;
+}
+
+#tokLiveRooms #roomsList{
+	margin: 0;
+	padding: 0;	
+	height: 240px;
+	width: 750px;
+	float: left;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+#tokLiveRooms p{
+	padding-left: 10px;
+}
+#tokLiveRooms .title{
+	margin: 0 0 10px 0;
+	height: 17px;
+	width: 370px;
+	font-size: 11px;
+	padding: 2px 0 0 10px;
+	color: white;
+	letter-spacing: .1em;
+	background-color: #414042;
+}
+
+/*
+#tokLiveRooms #roomParticipants{
+	margin: 0px 0px 0px 0px;
+	padding: 0;	
+	height: 180px;
+	width: 380px;
+	border: 3px solid #414042;	
+	background-color: white;
+	display: none;
+	float: right;
+}
+*/
+
+#tokLiveRooms #newSessionButtonHolder{
+	margin: 21px 0 0 0;
+	padding: 0 90px 0 0;	
+	float: right;
+}
+
+
+#tokLiveRooms p{
+	height: 20;
+	margin: 0px 0px 5px 10px;
+	padding: 4px 0 0 35px;
+	color: #414042;
+	background-image: url(../images/square-24-grey.png);
+	background-repeat: no-repeat;
+}
+
+#tokLiveRooms .friend{
+	color: #9547A8;
+	background-image: url(../images/square-24-purple.png);
+}
+
+
+.tokRoomButtons{
+	float:right;
+}
+
+.tokRoomTitle{
+	
+}
+
+#roomsTable{
+	border: none;
+	border-spacing: 0;
+	width: 100%;
+	text-align: center;
+}
+
+#roomsTable thead{
+	border-bottom: solid;
+	
+}
+
+#roomsTable col{
+	border: solid;
+	
+}
+
+
+#roomsTable th{
+	font-size: 12px;
+	font-weight: normal;
+	color: #939598;
+	border-bottom: 1px solid #939598;
+	padding-bottom: 5px;
+}
+
+#roomsTable tr{
+}
+
+#roomsTable td{
+	height: 43px;
+	width: 85px;
+	border-bottom: 1px solid #939598;
+	font-weight: bold;
+}
+
+#roomsTable .viewButtonCell{
+	width: 54px;
+}
+#roomsTable .participateButtonCell{
+	text-align: left;
+	width: 102px;
+}
+#roomsTable .viewersCell{
+	color: #939598;
+	font-style: italic;
+}
+#roomsTable .friendsCell{
+	color: #939598;
+	font-style: italic;
+}
+#roomsTable .arrowCell{
+	background-image: url(../images/arrow-right-blue.png);
+	background-repeat: no-repeat;
+	background-position: left;	
+	/* background-position-x: 50px; */
+}
+
+#roomsTable .arrowCellSel{
+	background-image: url(../images/arrow-selected-row.png);
+	background-repeat: no-repeat;
+	background-position: right;	
+	background-position-x: 50px;
+}
+
+#roomsTable .twitterFriendsCell{
+	width:420px;
+}
+
+.participantsTwitterIcon{
+	background-color: white;
+	height: 24px;
+	width: 24px;
+	float:left;
+	margin-right: 3px;
+}
+
+.participantsTwitterIcon img{
+
+}
+
+.participantsTwitterIconRollover{
+	width: 134px;
+	height: 31px;
+	padding-top: 6px;
+	text-align: center;
+	background: url(../images/rollover-back.png) no-repeat;
+	position:relative;
+	top: -58px;
+	left: -55px;
+	display: none;
+	color: white;
+	font-size: 10px;
+	pointer-events: none;
+}
+
+#roomsTable button{color: white;
+	height: 20px;
+	width: 50px;
+	border: none;
+	padding: 0;
+	background-color: #00A4E4;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+
+#roomsTable .roomParticipateButton{
+	width: 90px;
+}
+
+
+#roomsTable .roomViewButton{
+	width: 52px;
+}
+
+
+#roomsTable .roomParticipateButton:hover{ background-color: #0090BC; }
+#roomsTable .roomParticipateButton:active{ background-color: #45CFFF; }
+
+#roomsTable .roomViewButton:hover{ background-color: #0090BC; }
+#roomsTable .roomViewButton:active{ background-color: #45CFFF; }
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+	TOKBOX VIDEO CONTAINERS in Panel 3
+*/
+.tokBoxVideoRow{
+	height:150px;
+}
+.streamHolder{
+	height: 136px;
+	width: 213px;
+}
+
+.tokBoxVideoRow .right{
+	float: right;
+}
+
+.tokBoxVideoRow .left{
+	float: left;
+}
+
+#stream_1{ background-image: url(../images/silhouette01.png); background-repeat: no-repeat; }
+#stream_2{ background-image: url(../images/silhouette02.png); background-repeat: no-repeat; }
+#stream_3{ background-image: url(../images/silhouette03.png); background-repeat: no-repeat; }
+#stream_4{ background-image: url(../images/silhouette04.png); background-repeat: no-repeat; }
+#stream_5{ background-image: url(../images/silhouette05.png); background-repeat: no-repeat; }
+#stream_6{ background-image: url(../images/silhouette06.png); background-repeat: no-repeat; }
+#stream_7{ background-image: url(../images/silhouette07.png); background-repeat: no-repeat; }
+#stream_8{ background-image: url(../images/silhouette08.png); background-repeat: no-repeat; }
+#stream_9{ background-image: url(../images/silhouette09.png); background-repeat: no-repeat; }
+#stream_10{ background-image: url(../images/silhouette10.png); background-repeat: no-repeat; }
+
+
+/*
+.tokBoxVideoRow .username {
+	margin-top: 100px;
+	margin-right: 25px;
+	float: right;
+	position: relative;
+	border:0px solid red;
+	writing-mode:rl-tb;
+	-webkit-transform:rotate(-90deg);
+	-moz-transform:rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	white-space:nowrap;
+	bottom:0;
+	width:20px;
+	height:20px;
+	font-size: 11px;
+}
+*/
+
+.tokBoxVideoRow .username {
+	font-size: 11px;
+	margin-bottom: 1px;
+	display:none;
+}
+
+.streamAndLabelHolder{
+}
+
+
+
+
+
+/* 
+	TWITTER stream in panel 3 
+*/
+#twitterStreamContainer{
+	width: 480px;
+	height: 390px;
+	overflow-y: hidden;
+	overflow-x: hidden;
+}
+#twitterStreamContainer .tweetContainer{
+	height: 70px;
+	margin-bottom: 10px;
+	color: #6D6E71;
+}
+#twitterStreamContainer .tweetAvatar{
+	float:left;
+	margin-right: 10px;
+	min-width:48px;
+	height:60px;
+}
+#twitterStreamContainer img{
+	max-height:48px;
+	max-width:48px;
+}
+#twitterStreamContainer .tweetDate{
+	float:right;
+	font-size: 10px;
+	color: #414042;
+	margin-top: 5px;
+}
+#twitterStreamContainer .twitterUsername{
+	color: #58595B;
+	font-size: 16px;
+}
+#twitterStreamContainer .twitterUsername a{
+	color: #58595B;
+	text-decoration: none;
+}
+#twitterStreamContainer .twitterUsername a:hover{
+	text-decoration: underline;
+}
+
+#twitterStreamContainer a{
+	color: #6D6E71;
+	text-decoration: none;
+}
+#twitterStreamContainer a:hover{
+	text-decoration: underline;
+}
+#twitterSearchTerms{
+	color: #414042;
+	text-transform: uppercase;
+	font-size: 16px;
+	margin-bottom: 5px;
+}
+
+
+
+
+
+
+
+
+
+/*
+	SHARE items in panel 2
+*/
+#sharePanel{
+	margin-top: 2px;
+}
+
+.shareText{
+	
+}
+
+.shareTextPanelThree{
+	margin-top: 7px;
+}
+
+
+#twitterShareControls{
+	width: 430px;
+	margin-right: 53px;
+	margin-top: -6px;
+	float: right;
+	display: none;
+}
+
+
+.inputArea{
+	width: 300px;
+	height: 30px;
+	background-color: white;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border: 1px solid #00A4E4;
+}
+
+#roomURLInput[type="text"]{
+	display: block;
+	background-color: transparent;
+	border: none;
+	width: 230px;
+	padding: 8px;
+}
+
+#copyURLButton{
+	background-color: transparent;
+	height:30px;
+	width: 42px;
+	float: right;
+}
+
+
+
+.panelThreeHeaderButton{
+	border: none;
+	color: white;
+	height: 32px;
+	width: 105px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	cursor: pointer;
+	float: right; 
+	font-size: 12px;
+	background-color: #00A4E4;		
+	line-height: 30px;
+}
+.panelThreeHeaderButton .twitterIcon{
+	margin-top: -8px;
+}
+.panelThreeHeaderButton:hover{ background-color: #0090BC; }
+.panelThreeHeaderButton:active{ background-color: #45CFFF; }
+
+#panelThreeHeaderParticipateButton{
+	width:90px;
+}
+
+#panelThreeHeaderExitButton{
+	width:50px;
+	margin-right: 43px;
+}
+
+
+
+.headerButton{
+	border: none;
+	color: white;
+	height: 24px;
+	width: 105px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	cursor: pointer;
+	float: right; 
+	font-size: 12px;
+	background-color: #00A4E4;			
+}
+
+.headerButton:hover{ background-color: #0090BC; }
+.headerButton:active{ background-color: #45CFFF; }
+
+
+
+
+/* FOOTER */
+
+#footer{
+	width: 950px;
+	border-top: 1px solid #ccc;
+	margin: 0 auto;
+	margin-top: 20px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	color: #BCBEC0;
+	font-size: 12px;
+}
+#footer a:link		{ color:#BCBEC0; text-decoration:none; }
+#footer a:visited	{ color:#BCBEC0; text-decoration:none; }
+#footer a:hover		{ color:#444; text-decoration:underline; }
+#footer a:active	{ color:#444; text-decoration:underline; }
+
+
+
+#debugPanel{
+	position: absolute;
+	background: white;
+	width: 300px;
+	height:200px;
+	bottom: 5px;
+	left: 5px;
+	padding: 3px;
+	border: 1px solid #ccc;
+	font-size: 10px;
+	text-align: left;
+	display: none;
+}
+
+
+
+
+

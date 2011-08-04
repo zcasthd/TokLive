@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Tok Live</title>
+		<link type="text/css" href="styles/toklive.css" rel="stylesheet" media="all" >
+		<link type="text/css" href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+		<script type="text/javascript" src="http://platform.twitter.com/anywhere.js?id=uzugQKz0A631JIRMTjw&amp;v=1"></script>
+		<!-- <script type="text/javascript" src="http://platform.twitter.com/anywhere.js?id=QvmWqQZoDDre7lw5SqqcXg&amp;v=1"></script> -->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+		<script type="text/javascript" src="http://staging.tokbox.com/v0.91/js/TB.min.js"></script>
+		<script type="text/javascript" src="scripts/swfobject.js"></script>
+		<script type="text/javascript" src="scripts/toklive_config.js"></script>
+		<script type="text/javascript" src="scripts/toklive.js"></script>		
+	</head>
+	<body>
+		<div id="content">
+			<div id="titleBar">
+				<div id="titleBarContent">
+					<div class="logo" id="logoContainer">
+						<a href="http://opentok.com/"><img src="images/opentok-logo.png" alt="opentok-logo" width="180" height="34" border="0"></a>
+					</div>
+					<div class="titleText" id="titleContainer">TOK LIVE</div>
+				</div>
+			</div>
+			
+			
+			
+			<!-- Sliding Panel One -->
+			<div id="panelOne" class="tokLivePanel">
+				<div id="panelHeaderOne" class="panelHeader">
+					<div id="panelSubheaderOne">
+						
+						<div class="panelInstructions">
+							<div class="instructionNumber"><img src="images/circle-1.png" alt="1" width="20" height="20"></div>
+							<div class="instructionText" id="panelOneHeaderText">SIGN IN with your Twitter account.</div>
+							<div id="panelOneTwitterConnectButton"><button id="twitterConnectButton" class="bigBlueButton" onClick="handleTwitterConnectButton()">Initializing ...</button></div>
+						</div>
+					</div>
+				</div>
+							
+			</div>
+			
+			
+			
+			
+			
+			<!-- Sliding Panel Two -->
+			<div id="panelTwo" class="tokLivePanel">
+				<div id="panelHeaderTwo" class="panelHeader">
+					<div id="panelButtonTwo" class="openPanelButton" >
+						<div><img src="images/arrow-open.png" alt="arrow-open" width="11" height="8" ></div>
+					</div>
+						<div class="panelInstructions">
+							<div class="instructionNumber"><img src="images/circle-2.png" alt="2" width="20" height="20"></div>
+							<div id="panelSubheaderTwo">
+								<div id="panelTwoInstructionText">SELECT a session to participate in or view, and see which sessions your Twitter friends are in.</div>
+							</div>
+							<div id="numberParticipantsText">0 viewers, 0 participants</div>
+						</div>
+				</div>
+				<div id="panelContentTwo">					
+					<div id="tokLiveRooms">
+						<div id="roomsList"></div>
+						<div id="newSessionButtonHolder">
+							<button id="newTokboxSessionButton" class="bigBlueButton width150" onClick="handleStartNewSessionClick()">New Session</button>
+						</div>
+					</div>					
+				</div>			
+			</div>
+			
+			
+			
+			
+			
+			<!-- Panel Three -->
+			<div id="panelThree"  class="tokLivePanel">
+				<div id="panelHeaderThree" class="panelHeader">
+					<div class="instructionNumber panelThreeInstructionNumber"><img src="images/circle-3.png" alt="3" width="20" height="20"></div>
+					<div class="shareTextPanelThree panelThreeLeft">SEND the link to your friends.</div>
+					<div class="inputArea panelThreeLeft">		
+						<div id="copyURLButton" ><div id="copyToClipboardSWF"></div></div>
+						<input type="text" id="roomURLInput" value="" readonly />
+					</div>
+					<div class="panelThreeLeft">
+						<button class="panelThreeHeaderButton" onClick="onTweetButtonClick()">Tweet it <img src="images/twitter_bird.png" alt="Tweet it" width="29" height="20" align="middle" class="twitterIcon"/></button>
+					</div>
+					<div id="panelThreeHeaderButtons">
+						<div class="panelThreeRight">
+							<button id="panelThreeHeaderExitButton" class="panelThreeHeaderButton" onClick="handlePanelThreeExitButtonClick()">Exit</button>
+						</div>
+						<div class="panelThreeRight">
+							<button id="panelThreeHeaderParticipateButton" class="panelThreeHeaderButton" onClick="handlePanelThreeParticipateButtonClick()">Participate</button>
+						</div>
+						
+					</div>
+				</div>			
+				<div id="panelContentThree">
+					<div id="panelThreeRight">
+						<div class="tokBoxVideoRow">
+							<div class="streamAndLabelHolder left">
+								<div id="stream_name_1" class="username"></div>
+								<div id="stream_1" class="streamHolder"></div>
+							</div>
+							<div class="streamAndLabelHolder right">
+								<div id="stream_name_2" class="username"></div>
+								<div id="stream_2" class="streamHolder"></div>
+							</div>
+						</div>
+						<div class="tokBoxVideoRow">
+							<div class="streamAndLabelHolder left">
+								<div id="stream_name_3" class="username"></div>
+								<div id="stream_3" class="streamHolder"></div>
+							</div>
+							<div class="streamAndLabelHolder right">
+								<div id="stream_name_4" class="username"></div>
+								<div id="stream_4" class="streamHolder"></div>
+							</div>
+						</div>
+						<div class="tokBoxVideoRow">
+							<div class="streamAndLabelHolder left">
+								<div id="stream_name_5" class="username"></div>
+								<div id="stream_5" class="streamHolder"></div>
+							</div>
+							<div class="streamAndLabelHolder right">
+								<div id="stream_name_6" class="username"></div>
+								<div id="stream_6" class="streamHolder"></div>
+							</div>
+						</div>
+						<div class="tokBoxVideoRow">
+							<div class="streamAndLabelHolder left">
+								<div id="stream_name_7" class="username"></div>
+								<div id="stream_7" class="streamHolder"></div>
+							</div>
+							<div class="streamAndLabelHolder right">
+								<div id="stream_name_8" class="username"></div>
+								<div id="stream_8" class="streamHolder"></div>
+							</div>
+						</div>
+						<div class="tokBoxVideoRow">
+							<div class="streamAndLabelHolder left">
+								<div id="stream_name_9" class="username"></div>
+								<div id="stream_9" class="streamHolder"></div>
+							</div>
+							<div class="streamAndLabelHolder right">
+								<div id="stream_name_10" class="username"></div>
+								<div id="stream_10" class="streamHolder"></div>
+							</div>
+						</div>	
+					</div>
+					
+					<div id="panelThreeLeft">
+						<div id="liveVideoEventContainer"><div id="liveVideoInnerContainer"></div></div>
+						<div id="twitterSearchTerms">Search terms:</div>
+						<div id="twitterStreamContainer"></div>
+					</div>
+										
+				</div>
+			</div>
+			
+			
+			<!--FOOTER -->
+			<div id="footer">
+	  			Copyright &copy; 2011 <a href="http://www.tokbox.com">TokBox</a> | Developed by <a href="http://www.bucketduck.com">Bucketduck Inc. </a>
+	  		</div>
+					
+			<div id="lsoShimContainer">
+				<object id="lsoShim" width="33" height="33">
+					<param name="movie" value="scripts/lsoshim.swf">
+					<param name="allowScriptAccess" value="sameDomain">
+					<param name="wmode" value="transparent">
+					<param name="id" value="lsoShim">
+					<embed src="scripts/lsoshim.swf"
+						width="33" height="33" name="lsoShim" wmode="transparent"
+						allowScriptAccess="sameDomain">
+				</object>
+			</div>	
+		</div>
+		<div id="debugPanel">
+				
+			</div>
+	</body>
+</html>

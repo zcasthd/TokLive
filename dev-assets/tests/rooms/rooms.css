@@ -1,0 +1,99 @@
+body { 
+	margin: 20px;
+	padding: 0px;
+	height: 100%;
+	font-family: Verdana;
+	font-size: 11px;
+}
+
+#tokLiveRooms #roomsList{
+	margin: 0px 10px 0px 0px;
+	padding: 0;	
+	height: 300px;
+	width: 100px;
+	border: 1px solid #333;	
+	overflow-x: hidden;
+	overflow-y: auto;
+	float: left;
+}
+
+
+#tokLiveRooms p{
+	padding-left: 10px;
+}
+#tokLiveRooms .title{
+	margin: 0;
+	height: 17px;
+	width: 100%;
+	padding: 2px 0 0 10px;
+	color: white;
+	background-color: black;
+}
+
+#tokLiveRooms .friend{
+	color: red;
+}
+
+
+#tokLiveRooms #roomsList ul{
+	margin: 0;
+	padding: 0;
+}
+
+#tokLiveRooms #roomsList li{
+	list-style:none;
+	margin: 0;
+	padding: 8px 0 0 10px;
+	height: 20px;
+	width: 100%;
+	background-color: #eee;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #ddd;
+	cursor: pointer;
+}
+
+#tokLiveRooms #roomsList li:hover{
+	background-color: #fff;
+}
+
+#tokLiveRooms #roomsList li:active{
+	background-color: yellow;
+}
+
+
+#tokLiveRooms #roomParticipants{
+	margin: 0px 10px 0px 0px;
+	padding: 0;	
+	height: 300px;
+	width: 180px;
+	border: 1px solid #ccc;	
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+
+
+
+
+
+
+
+
+#friendsList p{
+	margin: 0;
+}
+
+.log{
+	padding-top: 5px;
+	color: blue;
+}
+
+.log p{
+	margin: 0px;
+}
+
+#progressIndicatorHolder{
+	height: 50px;
+	width: 272px;
+	margin-bottom: 10px;
+}

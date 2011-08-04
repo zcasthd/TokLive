@@ -1,0 +1,79 @@
+Sessions
+
+/session/all -- returns all sessions 
+/session/get/<OPENTOK-ID> -- returns specified session
+/session/create/<OPENTOK-ID> -- creates a new session with specified OpenTok-ID
+/session/delete/<OPENTOK-ID> -- deletes specified session
+
+Participants
+/participant/join/<OPENTOK-ID>/<TWITTER-HANDLE> -- records user as a participant in the specified session
+/participant/leave/<OPENTOK-ID>/<TWITTER-HANDLE> -- delists user as a participant in the specified session
+
+Viewers
+/viewer/join/<OPENTOK-ID>/<TWITTER-HANDLE> -- records user as a viewer in the specified session
+/viewer/leave/<OPENTOK-ID>/<TWITTER-HANDLE> -- delists user as a viewer in the specified session
+
+Serialized form of Session
+
+{
+   "opentokID":"1234567",
+   "name":"Session 1",
+   "participants":[
+      "craig",
+      "randy"
+   ],
+   "viewers":[
+      "tanya",
+      "lisa"
+   ]
+}
+
+Serialized form of Session array
+
+{
+   "sessions":[
+      {
+         "opentokID":"OT12345",
+         "name":"1",
+         "participants":[
+            "cschlegelmilch",
+            "tanyacamp"
+         ],
+         "viewers":[
+            "randytroppmann",
+            "lisa"
+         ]
+      },
+      {
+         "opentokID":"OT9876",
+         "name":"49",
+         "participants":[
+
+         ],
+         "viewers":[
+
+         ]
+      },
+      {
+         "opentokID":"OT9876",
+         "name":"77",
+         "participants":[
+
+         ],
+         "viewers":[
+
+         ]
+      }
+   ]
+}
+
+Serialized form of base messages
+{
+  "status":"ok"
+}
+
+Serialized form for error messages
+{
+  "status":"error",
+  "message":"Duplicate entry 'elsa' for key 'handle'"
+}

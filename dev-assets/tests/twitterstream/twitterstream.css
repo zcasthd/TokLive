@@ -1,0 +1,49 @@
+body { 
+	padding: 0px;
+	height: 100%;
+	font-family: Verdana;
+	font-size: 11px;
+	background-color: #ccc;
+}
+
+
+div.twitter {width: 300px }
+#twitter1 { height: 200px; }
+#twitter2 { height: 300px; }
+#twitter3 { height: 400px; width: 200px; }
+
+
+#content{
+	padding: 20px;
+}
+
+#form{
+	padding-bottom: 20px;
+}
+
+
+/* TWITTER feed */
+#twitterResultsContainer{
+	width: 400px;
+	height: 400px;
+	padding: 5px;
+	border: 1px solid #333;	
+	overflow: auto;
+}
+
+#tweetsContainer{
+	width: 400px;
+	height: 100%;
+}
+
+.tweet{
+	width: 390px;
+	margin-bottom: 10px;
+	min-height: 48px;
+}
+.avatar{
+	min-height: 62px;
+	margin-right: 5px;
+	float: left;
+	clear:left;
+}

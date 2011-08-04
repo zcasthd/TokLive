@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>TOK live</title>
+		<meta name="description" content="Group video viewing with Tokbox!">
+		<meta name="keywords" content="video chat, OpenTok, TokBox">
+		<link type="text/css" href="styles/custom-theme/jquery-ui-1.8.10.custom.css" rel="stylesheet" />
+		<link type="text/css" href="styles/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+		<link rel="stylesheet" type="text/css" href="styles/toklive_old.css" />	
+		<script type="text/javascript">
+			var baseURL = "http://www.randytroppmann.com/googleiolive/";
+			var thePartnerKey = 1127;
+		</script>
+		<script type="text/javascript" src="http://platform.twitter.com/anywhere.js?id=uzugQKz0A631JIRMTjw&amp;v=1"></script>
+		<script type="text/javascript" src="scripts/jquery-1.4.4.min.js"></script>
+		<script type="text/javascript" src="scripts/jquery-ui-1.8.10.custom.min.js"></script>
+		<script type="text/javascript" src="scripts/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="scripts/jquery.jscrollpane.min.js"></script>
+		<script type="text/javascript" src="http://staging.tokbox.com/v0.91/js/TB.min.js"></script>
+		<script type="text/javascript" src="scripts/swfobject.js"></script>
+		<script type="text/javascript" src="scripts/toklive.js"></script>
+	</head>
+	
+	<body>	
+		<div id="content">	
+			<div id="top">		
+				<div class="videoContainer">
+					<div id="videoPlayerHolder">		
+						<object width="480" height="296" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000">
+							<param name="flashvars" value="cid=1524&amp;autoplay=false&amp;style=ub006699:lc54ABD6:ocffffff:ucffffff"/>
+							<param name="allowfullscreen" value="true"/>
+							<param name="allowscriptaccess" value="always"/>
+							<param name="src" value="http://www.ustream.tv/flash/viewer.swf"/>
+							<embed flashvars="cid=1524&amp;autoplay=true&amp;style=ub006699:lc54ABD6:ocffffff:ucffffff" width="480" height="296" allowfullscreen="true" allowscriptaccess="always" src="http://www.ustream.tv/flash/viewer.swf" type="application/x-shockwave-flash"></embed>
+						</object>
+  					</div>
+				</div>
+				<div class="masthead">				
+					<p><a href="http://opentok.com"><img src="images/opentok-logo.png" alt="opentok-logo" width="280" height="41" border="0" /></a></p>
+					<p><button id="twitterConnectButton" onclick="handleTwitterConnectButton()" >connect with twitter</button></p>
+					<p  class="title">Share this link with your friends</p>
+					<div id="mainButtons">
+						<button class="tweetButton" onclick="onTweetButtonClick()"><img src="images/twitter_bird.png" alt="Tweet it" align="middle" class="twitterIcon"/></button>
+						<div class="inputArea">		
+							<div id="copyURLButton" >							
+								<div id="copyToClipboardSWF"></div>
+							</div>
+							<input type="text" id="roomURL" value="This is a test value" readonly="readonly"/>
+						</div>
+					</div>
+					
+					<div class="controlButtons">
+						<button class="tweetButton" onclick="onTweetButtonClick()">Tweet it</button>
+						<button class="stopParticipatingButton" onclick="" id="joinButton">Share via Facebook</button>
+					</div>
+					<div id="twitterResultsContainer">
+						<div id="tweetsPane">These are twitter search results</div>
+					</div>
+						
+					<!-- <div id="tweetBoxContainer"></div> -->	
+						
+				</div>		
+			</div>
+			<div id="middle">
+													
+
+				<ul class="streamsList">
+					<li id="dude1">
+						<div id="stream_name_1" class="streamName"></div>
+						<div id="stream_1" class="streamHolder1"></div>
+					</li>
+					<li id="dude2">
+						<div id="stream_name_2" class="streamName"></div>
+						<div id="stream_2" class="streamHolder2"></div>
+					</li>
+					<li id="dude3">
+						<div id="stream_name_3" class="streamName"></div>
+						<div id="stream_3" class="streamHolder3"></div>
+					</li>
+					<li id="dude4">
+						<div id="stream_name_4" class="streamName"></div>
+						<div id="stream_4" class="streamHolder4"></div>
+					</li>
+					
+				</ul>
+				<ul class="streamsList">
+					<li id="dude5">
+						<div id="stream_name_5" class="streamName"></div>
+						<div id="stream_5" class="streamHolder5"></div>
+					</li>
+					<li id="dude6">
+						<div id="stream_name_6" class="streamName"></div>
+						<div id="stream_6" class="streamHolder6"></div>
+					</li>
+					<li id="dude7">
+						<div id="stream_name_7" class="streamName"></div>
+						<div id="stream_7" class="streamHolder7"></div>
+					</li>
+					<li id="dude8">
+						<div id="stream_name_8" class="streamName"></div>
+						<div id="stream_8" class="streamHolder8"></div>
+					</li>
+					
+				</ul>
+				
+			</div>
+			<div id="footer">
+	  			Copyright &copy; 2011 <a href="http://www.tokbox.com">TokBox</a> | Developed by <a href="http://www.bucketduck.com">Bucketduck Inc. </a>
+	  		</div>
+	  	</div>
+	</body>
+</html>
+
+
+
+
+

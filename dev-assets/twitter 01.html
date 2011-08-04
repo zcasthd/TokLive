@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+	<head>
+		<title>Google IO Live</title>
+		
+		<script src="http://platform.twitter.com/anywhere.js?id=uzugQKz0A631JIRMTjw&amp;v=1"></script>
+  		<script type="text/javascript">
+  			var isConnectedToTwitter = false;
+  		
+  		
+		    twttr.anywhere(function(twitter) {
+		    	twitter.hovercards();
+		    });
+		     
+		    twttr.anywhere(function (T) {
+		   		T("#login1").connectButton({ size: "small" });
+		  	});
+		  	
+		  	twttr.anywhere(function (T) {
+		   		T("#login2").connectButton({ size: "medium" });
+		  	});
+		  	
+		  	twttr.anywhere(function (T) {
+		   		T("#login3").connectButton({ size: "large" });
+		  	});
+		  	
+		  	twttr.anywhere(function (T) {
+		   		T("#login4").connectButton({ size: "xlarge" });
+		  	});
+		  	
+		  	var ddata;
+		  	
+		  	twttr.anywhere(function (T) {
+				
+			    T.bind("authComplete", function (e, user) {
+			    	window.document.getElementById("signInButton").innerHTML = "Sign out of Twitter";
+  					isConnectedToTwitter = true;
+			    	var statsDiv = window.document.getElementById("stats");
+			    	ddata = T.currentUser;
+			    	statsDiv.innerHTML = "<p>Name: " + T.currentUser.data('name') + "</p><p>Followers: " +  T.currentUser.data('followers_count') + "</p><p>Following: " + T.currentUser.data('friends_count') + "</p>";
+			    });
+			
+			    T.bind("signOut", function (e) {
+			    	window.document.getElementById("signInButton").innerHTML = "Sign into Twitter";
+  					isConnectedToTwitter = false;
+  					var statsDiv = window.document.getElementById("stats");
+  					statsDiv.innerHTML = "<p>Signed out of twitter</p>";
+
+			    });
+		
+		  	});
+		  	
+		  	function handleTwitterSignInButton(){
+		  		if (isConnectedToTwitter){
+		  			twttr.anywhere.signOut();
+		  		}
+		  		else{ 
+		  			twttr.anywhere(function (T) {
+													T.signIn();
+												});
+		  		}
+		  		
+		  	}
+		  	
+		  	
+  		</script>
+	</head>
+	<body>
+		<p>Hi my name is @randytroppmann.</p>		
+		<div>
+			<span id="login1"></span>		
+			<span id="login2"></span>		
+			<span id="login3"></span>	
+			<span id="login4"></span>
+		</div>		
+		
+		<button type="button" onclick="handleTwitterSignOutButton()" id="signInButton">Sign out of twitter</button>
+		<div id="stats">
+		
+		</div>
+
+	</body>
+</html>

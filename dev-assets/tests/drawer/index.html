@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<title>Drawer test</title>
+		<link type="text/css" href="drawer.css" rel="stylesheet" media="all" />
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+		<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+		<script type="text/javascript">
+			$(document).ready(function(){
+			
+				$("#controlPanelHeader").click(function(){
+					$("#controlPanelContent").slideToggle("fast");
+				});
+				
+				 
+			});
+		</script>
+		
+		
+	</head>
+	<body>
+		<div id="content">
+			<div id="titleBar">
+				<div id="titleBarContent">
+					<div class="logo">
+						<a href="http://opentok.com/"><img src="images/opentok-logo.png" alt="opentok-logo" width="180" height="34"/></a>
+					</div>
+					<p class="title">TOKLIVE<p>
+				</div>
+			</div>
+			<div id="controlPanel">
+				<div id="controlPanelHeader"></div>
+				<div id="controlPanelContent">
+					<p>This is inside the panel</p>
+					<p>More inside the panel</p>
+				</div>
+			
+			</div>
+			<div id="displayPanel">
+				<div id="displayPanelContent">
+					<div>This is some content</div>
+					<div>This is some more content</div>
+				</div>
+			</div>			
+		</div>
+	</body>
+</html>

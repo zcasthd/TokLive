@@ -1,0 +1,26 @@
+body { 
+	padding: 0px;
+	height: 100%;
+	font-family: Verdana;
+	font-size: 11px;
+}
+
+#friendsList{
+	margin: 20px 10px 0px 0px;
+	height: 500px;
+	width: 250px;
+	padding: 10px;	
+	border: 1px solid #333;	
+	overflow: auto;
+	float: left;
+}
+
+#friendsList p{
+	margin: 0;
+}
+
+.log{
+	padding-top: 5px;
+	margin: 10px;
+	color: blue;
+}

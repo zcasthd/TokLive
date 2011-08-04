@@ -1,0 +1,98 @@
+html{
+}
+
+body{
+	width: 100%;
+	margin: 0;
+	font-family: 'Lato', verdana, serif; 
+	font-size: 12px;
+	
+}
+
+#content{
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+
+
+/*
+	TITLE BAR
+*/
+#titleBar{
+	width: 100%;
+	height: 63px;
+	background-image: url(images/title-background.png);
+	background-repeat: repeat-x;
+}
+#titleBarContent{
+	width: 950px;
+	height: 63px;	
+	margin: 0 auto;
+}
+#titleBarContent .title{
+	padding-top: 10px;
+	color: white;
+	font-size: 36px;
+	font-family: 'Lato', arial, serif; 
+}
+#titleBarContent .logo{
+	float: right;
+	height: 34px;
+	margin-top: 14px;
+}
+
+
+
+
+/*
+	CONTROL PANEL
+*/
+#controlPanel{
+	width: 100%;
+	background-color: blue;
+	background-image: url(images/control-panel-back.png);
+	background-repeat: repeat-x;
+}
+#controlPanelHeader{
+	width: 950px;
+	height: 45px;	
+	margin: 0 auto;
+}
+#controlPanelContent{
+	width: 950px;
+	height: 200px;
+	display: none;
+	margin: 0px;
+	padding: 0px;
+	margin: 0 auto;
+}
+#controlPanelContent p{
+	padding: 0;
+	margin: 0;
+}
+
+
+
+
+
+/*
+	DISPLAY PANEL
+*/
+#displayPanel{
+	height: 200px;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	background-color: white;
+}
+#displayPanelContent{
+	width: 950px;
+	height: 100%;
+	padding: 0;
+	margin: 0 auto;
+	background-color: white;
+}
+
+

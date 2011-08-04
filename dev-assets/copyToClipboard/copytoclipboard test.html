@@ -1,0 +1,108 @@
+<html>
+	<head>
+		<title>copy to clipboard</title>
+		<script type="text/javascript" src="swfobject.js"></script>
+		<style type="text/css">
+			body{
+				background-color: #ccc;
+				font-family: Verdana;
+				font-size: 11px;
+			}
+			
+			h3{
+				padding-top: 5px;
+				padding: 5px 0 0 5px;
+				background-color: gray;
+				width: 300px;
+				height: 70px;
+				
+			}			
+			#inputContainer{
+				background-color: white;
+				height: 33px;
+				width: 300px;
+				font-size: 26px;				
+				-moz-border-radius:5px;
+				-webkit-border-radius:5px;
+				border-radius:5px;
+				padding: 0;
+			}
+			
+			.searchInput[type="text"]{
+				font-family: Times;
+				font-size: 16;
+				background-color: transparent;
+				border: none;
+				display: block;
+				padding:0px;
+				width:260px;				
+				padding: 7px;				
+			}
+			
+			.searchInput[type="text"]:focus{
+    					
+			}
+			
+			#inputContainer #enterButton{
+				border: none;
+				height: 100%;
+				width: 40px;
+				float: right;
+				-moz-border-radius-bottomright:5px;
+				-moz-border-radius-topright:5px;
+				-webkit-border-top-right-radius:5px;
+				-webkit-border-bottom-right-radius:5px;
+				border-top-right-radius: 5px;
+				border-bottom-right-radius: 5px;
+				cursor: pointer;
+			}
+			#inputContainer #enterButton:hover{
+				background-color: aqua;
+			}
+			
+			#inputContainer #enterButton:active{
+				background-color: red;
+			}			
+		</style>
+		
+		<script language="javascript">
+			
+			var copyToClipBoardSWF;
+			
+			
+			
+			function init(){
+				swfobject.embedSWF("copytoclipboard.swf", "copyToClipboardSWF", "40", "33", "9.0.0", "expressInstall.swf", null, {menu: "false", allowscriptaccess:"always", wmode:"transparent"}, {id:"copyToSWF"});
+				document.getElementById("copyInput").value = "copy Input Ready";
+			}			
+			
+			function onCopyToClipBoardSWFReady(){
+				document.getElementById("copyInput").value = "copyToClipBoardSWF ready";
+				copyToClipBoardSWF = document.getElementById("copyToSWF");
+				updateCopyToClipBoardSWF(document.getElementById("copyInput").value);
+			}
+			
+			function updateCopyToClipBoardSWF(p_text){
+				if (copyToClipBoardSWF) copyToClipBoardSWF.copyToClipBoard(p_text);
+				else alert("swf undefined");
+			}			
+			
+			function setText(p_text){
+				document.getElementById("copyInput").value = p_text;
+				updateCopyToClipBoardSWF(p_text)
+			}
+			 
+			
+		</script>	
+	</head>
+	<body onload="init()">
+		<h3>Copy to clipboard using swf experiment.</h3>
+		<div id="inputContainer">
+			<div id="enterButton" ><div id="copyToClipboardSWF"></div></div>
+			<input type="text" value="Initialized copy" name="experiment" class="searchInput" id="copyInput" onchange="updateCopyToClipBoardSWF(this.value)" on/>
+		</div>
+		<button onclick="setText('from the set button')">Set</button>
+		
+		
+	</body>
+</html>
